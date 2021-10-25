@@ -15,7 +15,7 @@ class Database extends AbstractTableModel {
     public void addRow() {
         List<TableData> row = new ArrayList<TableData>();
         for (TableHeader col : headers)
-            row.add(col.copyTableData());
+            row.add(col.createTableData());
         data.add(row);
         fireTableStructureChanged();
     }
@@ -23,7 +23,7 @@ class Database extends AbstractTableModel {
     public void addCol(TableHeader type) {
         headers.add(type);
         for(List<TableData> row : data)
-            row.add(type.copyTableData());
+            row.add(type.createTableData());
         fireTableStructureChanged();
     }
 

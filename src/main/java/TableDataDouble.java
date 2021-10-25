@@ -8,10 +8,10 @@ public class TableDataDouble implements TableData {
     }
 
     public TableData makeCopy() {
-        TableData obj = null;
+        TableDataDouble obj = null;
         try {
-            obj = (TableData) super.clone();
-            data = rnd.nextDouble();
+            obj = (TableDataDouble) super.clone();
+            obj.data = rnd.nextDouble();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

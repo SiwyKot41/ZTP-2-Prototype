@@ -8,10 +8,10 @@ public class TableDataChar implements TableData {
     }
 
     public TableData makeCopy() {
-        TableData obj = null;
+        TableDataChar obj = null;
         try {
-            obj = (TableData) super.clone();
-            data = (char) ('a' + rnd.nextInt(26));
+            obj = (TableDataChar) super.clone();
+            obj.data = (char) ('a' + rnd.nextInt(26));
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

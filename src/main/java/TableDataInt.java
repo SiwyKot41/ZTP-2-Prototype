@@ -8,10 +8,10 @@ public class TableDataInt implements TableData {
     }
 
     public TableData makeCopy() {
-        TableData obj = null;
+        TableDataInt obj = null;
         try {
-            obj = (TableData) super.clone();
-            data = rnd.nextInt(100);
+            obj = (TableDataInt) super.clone();
+            obj.data = rnd.nextInt(100);
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

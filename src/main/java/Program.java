@@ -41,10 +41,10 @@ public class Program {
                         JOptionPane.QUESTION_MESSAGE,
                         null,
                         new TableHeader[] {
-                                new TableHeaderInt(),
-                                new TableHeaderDouble(),
-                                new TableHeaderChar(),
-                                new TableHeaderBoolean(),
+                                new TableHeader("INT", new TableDataInt()),
+                                new TableHeader("DOUBLE", new TableDataDouble()),
+                                new TableHeader("CHAR", new TableDataChar()),
+                                new TableHeader("BOOLEAN", new TableDataBoolean()),
                         }, null);
                 if(option == null)
                     return;

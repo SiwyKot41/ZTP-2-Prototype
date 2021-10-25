@@ -8,10 +8,10 @@ public class TableDataBoolean implements TableData {
     }
 
     public TableData makeCopy() {
-        TableData obj = null;
+        TableDataBoolean obj = null;
         try {
-            obj = (TableData) super.clone();
-            data = rnd.nextBoolean();
+            obj = (TableDataBoolean) super.clone();
+            obj.data = rnd.nextBoolean();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
